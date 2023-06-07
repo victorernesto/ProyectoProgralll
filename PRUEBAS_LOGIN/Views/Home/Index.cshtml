@@ -1,0 +1,82 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+<body style="background-color: white;">
+    <p class="explicacion">Esta es la página de inicio de nuestra tienda de ropa en línea. ¡Explora nuestra colección de productos y encuentra lo que necesitas!</p>
+
+    <div class="product-list" style="display: flex;">
+        <div class="product" style="margin-right: 20px;">
+            <img src="@Url.Content("~/Content/Imagenes/camisamangalarga.png")" alt="Producto 1" />
+            <h3>Camisa de manga larga</h3>
+            <p>Precio: $29.99</p>
+
+            <div class="more-info" style="display: none;">
+                <p>Tallas disponibles: S, M, L</p>
+                <p>Colores disponibles: Blanco, Azul, Negro</p>
+                <p>Descripción: Esta camisa de manga larga es perfecta para cualquier ocasión. Está hecha de algodón suave y cuenta con un corte moderno y elegante. Disponible en varias tallas y colores.</p>
+            </div>
+            <a href="#" class="more-info-button">Más información</a>
+        </div>
+
+        <div class="product" style="margin-right: 20px;">
+            <img src="@Url.Content("~/Content/Imagenes/pantalon.png")" alt="Producto 2" />
+            <h3>Pantalones Jeans</h3>
+            <p>Precio: $39.99</p>
+            <div class="more-info" style="display: none;">
+                <p>Tallas disponibles: S, M, L</p>
+                <p>Colores disponibles: Blanco, Azul, Negro</p>
+                <p>Descripción: Este Jean es perfecto para cualquier ocasión. Está hecha de algodón suave y cuenta con un corte moderno y elegante. Disponible en varias tallas y colores.</p>
+            </div>
+            <a href="#" class="more-info-button">Más información</a>
+        </div>
+    </div>
+
+
+    <div class="product" style="margin-right: 20px; float:left;">
+        <img src="@Url.Content("~/Content/Imagenes/CamisaMangacorta.png")" alt="Producto 3" />
+        <h3>Camisa Manga Corta</h3>
+        <p>Precio: $25.99</p>
+        <div class="more-info" style="display: none;">
+            <p>Tallas disponibles: S, M</p>
+            <p>Colores disponibles: Blanco, Azul, Negro</p>
+            <p>Descripción: Esta camisa manga corta es perfecta para cualquier ocasión donde necesites ir formal. Está hecha de algodón suave y cuenta con un corte moderno y elegante. Disponible en varias tallas y colores.</p>
+        </div>
+        <a href="#" class="more-info-button">Más información</a>
+    </div>
+    </div>
+
+
+    <div class="product" style="margin-right: 20px; float:right;">
+        <img src="@Url.Content("~/Content/Imagenes/saconegro.png")" alt="Producto 4" />
+        <h3>Camisa Manga Corta</h3>
+        <p>Precio: $70.99</p>
+        <div class="more-info" style="display: none;">
+            <p>Tallas disponibles: S, M</p>
+            <p>Colores disponibles: Blanco, Azul, Negro</p>
+            <p>Descripción: Precioso saco te queda perfecto para cualquier ocasión donde necesites ir formal. Está hecha de algodón suave y cuenta con un corte moderno y elegante. Disponible en varias tallas y colores.</p>
+        </div>
+        <a href="#" class="more-info-button">Más información</a>
+    </div>
+
+
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $(".more-info-button").click(function (e) {
+                e.preventDefault();
+                $(this).prev(".more-info").slideToggle();
+            });
+        });
+    </script>
+
+
+
+
+
+</body>
+
+
